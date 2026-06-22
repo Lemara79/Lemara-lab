@@ -1,0 +1,26 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE 配置（PyCharm）
+.idea/
+*.iml
+.vscode/
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# 测试缓存
+.pytest_cache/
+.allure-results/
+
+# 日志和报告文件
+*.log
+*.html
+allure-report/
