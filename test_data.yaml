@@ -1,0 +1,13 @@
+login_test_data:
+  - username: "mor_2314"
+    password: "83r5^_"
+    expected_status: 201
+    description: "正确账号登录成功"
+  - username: "mor_2314"
+    password: "wrong_password"
+    expected_status: 401
+    description: "错误密码登录失败"
+  - username: "nonexistent_user"
+    password: "123456"
+    expected_status: 401
+    description: "不存在的账号登录失败"
