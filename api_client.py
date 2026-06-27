@@ -13,7 +13,7 @@ class APIClient:
         url = f"{self.base_url}{endpoint}"
         start_time=time.time()
 
-        log.info(f"📡 发送 POST 请求: {url}")
+        log.info(f"📡发送POST请求: {url}")
         log.debug(f"请求参数:{kwargs}")
 
         try:
@@ -30,7 +30,7 @@ class APIClient:
         """发送 GET 请求"""
         url = f"{self.base_url}{endpoint}"
         start_time=time.time()
-        log.info(f"📡 发送 GET 请求: {url}")
+        log.info(f"📡发送GET请求: {url}")
         log.debug(f"请求头:{kwargs.get('headers',{})}")
 
         try:

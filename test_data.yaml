@@ -11,3 +11,7 @@ login_test_data:
     password: "123456"
     expected_status: 401
     description: "不存在的账号登录失败"
+  - username: "maomao"
+    password: "219432"
+    expected_status: 401
+    description: "错误密码登陆失败"
