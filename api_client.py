@@ -41,3 +41,22 @@ class APIClient:
         except Exception as e:
             log.error(f"❌ 请求失败: {e}")
             raise
+
+    def delete(self, endpoint, **kwargs):
+        """
+        发送 DELETE 请求
+        """
+        url = f"{self.base_url}{endpoint}"
+        start_time = time.time()
+
+        log.info(f"📡 发送 DELETE 请求: {url}")
+        log.debug(f"请求参数: {kwargs}")
+
+        try:
+            response = self.session.delete(url, **kwargs)
+            elapsed = time.time() - start_time
+            log.info(f"✅ 响应状态码: {response.status_code}, 耗时: {elapsed:.3f}s")
+            return response
+        except Exception as e:
+            log.error(f"❌ 请求失败: {e}")
+            raise
