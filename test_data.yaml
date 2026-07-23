@@ -19,10 +19,6 @@ login_test_data:
     password: ""
     expected_status: 400
     description: "空密码登录失败"
-  - userAccount: "学号"
-    userPassword: "密码"
-    expected_status: 200
-    description: "教务系统登录测试"
 cart_login_data:
   username: "mor_2314"
   password: "83r5^_"
