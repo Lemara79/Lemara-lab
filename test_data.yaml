@@ -22,3 +22,16 @@ login_test_data:
 cart_login_data:
   username: "mor_2314"
   password: "83r5^_"
+grade_query_data:
+  - kksj: "2025-2026-2"
+    pageNum: 1
+    pageSize: 20
+    description: "查询2025-2026学年第二学期成绩"
+  - kksj: "2025-2026-1"
+    pageNum: 1
+    pageSize: 20
+    description: "查询2025-2026学年第一学期成绩"
+  - kksj: "2024-2025-2"
+    pageNum: 1
+    pageSize: 20
+    description: "查询2024-2025学年第二学期成绩"
