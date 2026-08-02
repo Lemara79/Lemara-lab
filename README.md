@@ -21,7 +21,7 @@
 - test_login_data_driven.py # 数据驱动登录测试
 - test_add_to_cart.py # 购物车流程测试
 - test_grade_query.py # 教务系统成绩查询（已实现，待网络恢复后验证）
-- test_playwright_demo.py
+- test_playwright_demo.py # UI 自动化测试（登录成功、登录失败、添加购物车）
 
 ## 运行测试
 
@@ -30,9 +30,26 @@ pytest test_login_data_driven.py -v -s
 pytest test_add_to_cart.py -v -s
 ```
 
-## 测试报告
+## 接口测试
 ```bash
-pytest --html=report.html --self-contained-html
+pytest test_login_data_driven.py -v -s
+pytest test_add_to_cart.py -v -s
+```
+## UI测试
+```bash
+pytest test_playwright_demo.py -v -s
+```
+
+## 测试报告
+
+### 1.接口测试报告
+```bash
+pytest test_login_data_driven.py --html=report.html --self-contained-html
+```
+
+### 2.UI测试报告
+```bash
+pytest test_playwright_demo.py --html=ui_report.html --self-contained-html
 ```
 ## 项目亮点
 - 数据驱动设计：测试数据与代码分离
