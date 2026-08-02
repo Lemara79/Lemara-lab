@@ -10,6 +10,7 @@
 - PyYAML
 - loguru
 - pytest-html
+- playwright
 
 ## 项目结构
 - api_client.py # 封装 HTTP 请求
@@ -20,6 +21,7 @@
 - test_login_data_driven.py # 数据驱动登录测试
 - test_add_to_cart.py # 购物车流程测试
 - test_grade_query.py # 教务系统成绩查询（已实现，待网络恢复后验证）
+- test_playwright_demo.py
 
 ## 运行测试
 
