@@ -19,7 +19,7 @@
 - test_data.yaml # 测试数据
 - test_login_data_driven.py # 数据驱动登录测试
 - test_add_to_cart.py # 购物车流程测试
-- test_grade_query.py # 教务系统成绩查询（待对接）
+- test_grade_query.py # 教务系统成绩查询（已实现，待网络恢复后验证）
 
 ## 运行测试
 

@@ -27,7 +27,7 @@ def logged_session():
         "userLanguage": "0",
         "userAccount": "2405020119",
         "userPassword": "",
-        "encoded": " 从浏览器重新抓取 encoded 值"
+        "encoded": " M3j6QR9UwY4EN8CTabAFiqy7M6eDY1E9x3x9OY98QoY=0g=A3%S%h%EbU4T9Tn3F2U31M0amSy5U3zDwcx2rjmr5R804fN178XQ45k6T280d5aT2c2dqXpibTO1U2GMb80Lb5Dc6DMB1AQa8%Ud0%E3%Y5IfbA8=3=a0N"
     }
     session = requests.Session()
     session.get(login_url, headers=headers)
