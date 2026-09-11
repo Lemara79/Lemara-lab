@@ -1,5 +1,5 @@
 import pytest
-import yaml  #专门用来写配置和测试数据的文件格式
+import yaml  #它是用来读取 YAML 格式数据的库
 import requests
 import os  #专门用来和操作系统打交道
 import allure
@@ -17,7 +17,7 @@ def load_test_data():
     return data["login_test_data"]
 
 
-@pytest.mark.parametrize("test_case", load_test_data())
+@pytest.mark.parametrize("test_case", load_test_data())##把 YAML 里的每组数据传给测试函数，每组数据生成一个独立的用例
 def test_login_data_driven(test_case):
     log.info(f"开始执行测试用例:{test_case['description']}")
 
@@ -28,7 +28,7 @@ def test_login_data_driven(test_case):
     }
 
     with allure.step(f"发送登录请求: {test_case['description']}"):
-        response = requests.post(url, json=payload)
+        response = requests.post(url, json=payload)##用 allure.step 在测试报告里记录‘发送登录请求’这个步骤
 
     with allure.step(f"验证状态码为 {test_case['expected_status']}"):
         assert response.status_code == test_case["expected_status"]
