@@ -51,6 +51,12 @@ pytest test_login_data_driven.py --html=report.html --self-contained-html
 ```bash
 pytest test_playwright_demo.py --html=ui_report.html --self-contained-html
 ```
+
+## 使用Docker运行（推荐）
+```bash
+docker compose up --build
+```
+
 ## 项目亮点
 - 数据驱动设计：测试数据与代码分离
 - 自动清理：使用 yield fixture 保持测试环境干净
