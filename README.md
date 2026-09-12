@@ -13,15 +13,24 @@
 - playwright
 
 ## 项目结构
-- api_client.py # 封装 HTTP 请求
-- config.py # 配置文件
-- conftest.py # Pytest fixture
-- logger_config.py # 日志配置
-- test_data.yaml # 测试数据
-- test_login_data_driven.py # 数据驱动登录测试
-- test_add_to_cart.py # 购物车流程测试
-- test_grade_query.py # 教务系统成绩查询（已实现，待网络恢复后验证）
-- test_playwright_demo.py # UI 自动化测试（登录成功、登录失败、添加购物车）
+
+```text
+pythonProject1/
+├── api_client.py          # HTTP 请求封装
+├── config.py              # 配置管理
+├── conftest.py            # Pytest fixture 管理
+├── test_data.yaml         # 数据驱动
+├── tests/
+│   ├── test_login.py      # 登录测试
+│   ├── test_cart.py       # 购物车测试
+│   └── test_grade_query.py # 教务系统查成绩测试
+├── ai_case_generator.py   # AI 辅助生成用例
+├── Dockerfile             # 容器化配置
+├── docker-compose.yml     # 一键启动测试环境
+└── .github/
+    └── workflows/
+        └── test.yml       # CI 自动跑测试
+```
 
 ## 运行测试
 
@@ -56,6 +65,21 @@ pytest test_playwright_demo.py --html=ui_report.html --self-contained-html
 ```bash
 docker compose up --build
 ```
+
+## 测试报告与日志
+
+### 接口测试报告
+![接口测试报告](images/interface_report.png)
+
+### UI 测试报告
+![UI测试报告](images/ui_report.png)
+
+### 日志文件
+每次运行测试时，`loguru` 会自动生成日志文件，保存在 `logs/` 目录下，例如 `logs/test_20260911.log`。
+
+### 失败截图
+UI 测试失败时，会自动截图保存，方便定位问题。
+
 
 ## 项目亮点
 - 数据驱动设计：测试数据与代码分离
