@@ -16,4 +16,4 @@ def test_load_test_data():
     with open(yaml_path,"r",encoding="utf-8") as f:
         data=yaml.safe_load(f)
     assert "login_test_data" in data
-    assert len(data["login_tset_data"])>0
+    assert len(data["login_test_data"])>0
