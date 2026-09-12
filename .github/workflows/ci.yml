@@ -25,4 +25,4 @@ jobs:
         playwright install chromium
 
     - name: Run tests
-      run: python -m pytest test_login_data_driven.py -v
+      run: python -m pytest test_ci_smoke.py -v
